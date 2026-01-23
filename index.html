@@ -5,338 +5,399 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Udaysinh Rathod | Research Portfolio</title>
   <meta name="description" content="Udaysinh Rathod — ML/Computer Vision, Geospatial AI, Remote Sensing, Time-Series, RAG." />
-
-  <style>
-    :root{
-      --max: 980px;
-      --pad: 20px;
-      --border: #e9e9e9;
-      --text: #111;
-      --muted: #444;
-      --card: #fff;
-    }
-    *{ box-sizing: border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.6;
-      color: var(--text);
-      background:#fff;
-    }
-    header{
-      position: sticky; top: 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-    }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: var(--pad); }
-    nav{ display:flex; flex-wrap: wrap; gap: 12px; align-items:center; }
-    nav a{ text-decoration:none; color: var(--text); padding: 8px 10px; border-radius: 10px; }
-    nav a:hover{ background:#f5f5f5; }
-
-    .hero{ padding: 42px 0 10px; }
-    h1{ margin:0 0 8px; font-size: 36px; letter-spacing: -0.02em; }
-    .subtitle{ margin:0 0 14px; color: var(--muted); max-width: 70ch; }
-    .btns{ display:flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 8px; }
-    .btn{
-      display:inline-block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid #111;
-      text-decoration:none;
-      color:#111;
-      font-weight: 600;
-    }
-    .btn:hover{ background:#111; color:#fff; }
-    .btn.ghost{ border-color: var(--border); font-weight: 600; }
-    .btn.ghost:hover{ background:#f5f5f5; color:#111; }
-
-    .pills{ margin-top: 8px; }
-    .pill{
-      display:inline-block;
-      border:1px solid var(--border);
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin: 6px 8px 0 0;
-      font-size: 13px;
-      color:#222;
-      background:#fafafa;
-    }
-
-    section{ padding: 18px 0; }
-    h2{ margin: 18px 0 10px; font-size: 22px; }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    @media (max-width: 820px){ .grid{ grid-template-columns: 1fr; } }
-
-    .card{
-      border:1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      background: var(--card);
-    }
-    .card h3{ margin: 0 0 6px; font-size: 18px; }
-    .meta{ color: var(--muted); font-size: 14px; margin: 0 0 10px; }
-    ul{ margin: 10px 0 0 18px; }
-    li{ margin: 6px 0; }
-    .twoCol{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    @media (max-width: 820px){ .twoCol{ grid-template-columns: 1fr; } }
-
-    footer{
-      border-top: 1px solid var(--border);
-      margin-top: 24px;
-      color:#555;
-    }
-    .small{ font-size: 13px; color:#555; }
-    .link{ color:#111; text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+   <link rel="javascript" href="js/script.js" />
 </head>
 
 <body>
   <header>
-    <div class="wrap">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between;">
       <nav>
         <a href="#about">About</a>
-        <a href="#interests">Research Interests</a>
+        <a href="#interests">Research</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button id="theme-toggle">🌙</button>
     </div>
   </header>
 
   <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Udaysinh Rahulkumar Rathod</h1>
-      <p class="subtitle">
-        Graduate Research Assistant • Machine Learning Lab, LSU Shreveport (M.S. Computer Systems Technology, GPA 4.0; Expected May 2026)
-      </p>
+    <!-- HERO SECTION -->
+    <section class="hero" data-reveal>
+      <div class="hero-content">
+        <h1>Udaysinh Rahulkumar Rathod</h1>
+        <div class="hero-visual" data-reveal>
+        
+        <img src="assets/images/profile.jpg" alt="Udaysinh Rathod" class="profile-img" />
+        
+      
+      </div>
+        <p class="subtitle">
+          Graduate Research Assistant, Machine Learning Lab • LSU Shreveport
+          <br>M.S. Computer Systems Technology (GPA 4.0, Expected May 2026)
+        </p>
 
-      <div class="btns">
-        <a class="btn" href="assets/Uday_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        <a class="btn ghost" href="https://github.com/udayDarbar" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/udaydarbar/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" href="https://scholar.google.com/citations?user=1_j-pE4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <div class="btns">
+          <a class="btn" href="assets/Uday_CV.pdf" target="_blank" rel="noopener">↓ CV (PDF)</a>
+          <a class="btn ghost" href="https://github.com/udayDarbar" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/udaydarbar/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://scholar.google.com/citations?user=1_j-pE4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+
+        <div class="pills">
+          <span class="pill">Computer Vision</span>
+          <span class="pill">Fall Detection & Pose Monitoring</span>
+          <span class="pill">Geospatial Healthcare (LHA)</span>
+          <span class="pill">Remote Sensing (MODIS)</span>
+          <span class="pill">Time-Series & Anomaly Detection</span>
+          <span class="pill">RAG & Multimodal Retrieval</span>
+        </div>
       </div>
 
-      <div class="pills">
-        <span class="pill">Computer Vision</span>
-        <span class="pill">Fall Detection & Pose Monitoring</span>
-        <span class="pill">Geospatial Healthcare (LHA)</span>
-        <span class="pill">Remote Sensing (MODIS)</span>
-        <span class="pill">Time-Series (Soft-DTW Siamese)</span>
-        <span class="pill">RAG / Multimodal Retrieval</span>
-      </div>
+      
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
+    <!-- ABOUT SECTION -->
+    <section id="about" data-reveal>
       <h2>About</h2>
-      <div class="card">
+      <div class="card" data-reveal>
         <p>
-          My academic trajectory centers on building intelligent systems for public good, spanning healthcare AI,
-          geospatial analytics, remote sensing, time-series modeling, and NLP systems. I currently serve as a Graduate Research Assistant
-          in the LSU Shreveport Machine Learning Lab, where I support end-to-end research workflows including data processing, model development,
-          and peer-reviewed writing and dissemination.
+          My research focuses on building intelligent systems for public good, spanning healthcare AI, geospatial analytics, 
+          remote sensing, time-series modeling, and NLP systems. As a Graduate Research Assistant in the LSU Shreveport Machine 
+          Learning Lab, I drive end-to-end research workflows: from data processing and model development to peer-reviewed writing 
+          and scientific dissemination.
         </p>
-        <p class="small">
-          Current research direction: trustworthy spatiotemporal learning for climate and satellite-based ice modeling; and privacy-aware patient safety monitoring.
+        <p>
+          <strong>Current direction:</strong> Trustworthy spatiotemporal learning for climate applications and satellite-based ice 
+          modeling; privacy-aware patient safety monitoring using real-time computer vision.
+        </p>
+        <p class="text-small">
+          Seeking PhD opportunities in computer vision, geospatial AI, and healthcare informatics.
         </p>
       </div>
     </section>
 
-    <!-- INTERESTS -->
-    <section id="interests">
+    <!-- RESEARCH INTERESTS SECTION -->
+    <section id="interests" data-reveal>
       <h2>Research Interests</h2>
-      <div class="twoCol">
-        <div class="card">
-          <h3>Primary</h3>
-          <ul>
-            <li>Human pose detection & prediction; real-time fall-detection systems</li>
-            <li>Geospatial healthcare metrics & accessibility modeling (LHA)</li>
-            <li>Spatiotemporal learning with satellite / reanalysis variables</li>
+      <div class="grid">
+        <div class="card" data-reveal>
+          <h3>Primary Areas</h3>
+          <ul >
+            <li>Human pose detection, prediction, and real-time fall detection systems</li>
+            <li>Geospatial healthcare accessibility modeling (LHA)</li>
+            <li>Spatiotemporal learning with satellite and reanalysis data</li>
+            <li>Clinical AI for surgical skill assessment and patient safety</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>Secondary</h3>
-          <ul>
-            <li>Multivariate time-series similarity search (Soft-DTW Siamese)</li>
-            <li>Remote sensing pipelines (MODIS HDF, geospatial processing)</li>
-            <li>Multimodal / multilingual RAG systems (offline, privacy-aware)</li>
+        <div class="card" data-reveal>
+          <h3>Secondary Areas</h3>
+          <ul >
+            <li>Multivariate time-series similarity search (Soft-DTW Siamese networks)</li>
+            <li>Remote sensing pipelines and geospatial processing (MODIS HDF)</li>
+            <li>Multimodal and multilingual RAG systems (offline, privacy-aware)</li>
+            <li>Privacy-preserving computer vision (RF-based 3D reconstruction)</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Selected Projects</h2>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" data-reveal>
+      <h2>Projects</h2>
       <div class="grid">
 
-        <div class="card">
-          <h3>Locational Health Access (LHA) Modeling for Cancer & Medicare Access</h3>
-          <p class="meta">Geospatial optimization • OSRM routing • Census + hospital harmonization</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+            <img src="assets/projects/lha-visualization.png" alt="Locational Health Access Map" />
+
+          </div>
+          <h3>Locational Health Access (LHA) Modeling</h3>
+          <p class="meta">Geospatial optimization • OSRM routing • Census harmonization</p>
           <ul>
-            <li>Developed LHA metric for colorectal cancer access (Louisiana), expanded nationwide.</li>
-            <li>Introduced optimization strategies (e.g., hospital radius optimization) to reduce compute cost.</li>
+            <li>Developed LHA metric for colorectal cancer access across Louisiana, expanding to national scale.</li>
+            <li>Implemented hospital radius optimization and geospatial indexing to reduce computational overhead.</li>
           </ul>
-          <p class="small">
-            Related publications: IEEE BIBM 2024; IEEE IETC 2025
-          </p>
+          <div class="project-status">
+             Published: IEEE BIBM 2024, IEEE IETC 2025
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Real-Time Fall Detection & Posture Monitoring (Clinical Collaboration)</h3>
-          <p class="meta">MediaPipe • Temporal modeling • Activity/agitation metrics</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+             <img src="assets/projects/fall-detection-visualization.png" alt="Pose Estimation Visualization" /> 
+          </div>
+          <h3>Real-Time Fall Detection & Posture Monitoring</h3>
+          <p class="meta">MediaPipe • Temporal modeling • Clinical deployment</p>
           <ul>
-            <li>Built a real-time monitoring pipeline using pose estimation + temporal signals.</li>
-            <li>Extended analysis to surgical skill assessment from video-based kinematics.</li>
+            <li>Built real-time monitoring pipeline using 2D pose estimation with temporal aggregation.</li>
+            <li>Extended to surgical skill assessment from video kinematics (lumbar pedicle screw placement).</li>
           </ul>
-          <p class="small">
-            Outcomes: SBEC 2025 (First Author, accepted); Neurosurgical Focus 2025
-          </p>
+          <div class="project-status">
+             Published: Neurosurgical Focus 2025 • SBEC 2025 (First Author)
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Hybrid Soft-DTW Siamese Network for Time-Series Similarity</h3>
-          <p class="meta">Industrial sequences • Anomaly detection • Learned similarity</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+             <img src="assets/projects/soft-dtw-visualization.png" alt="Time-Series Similarity" />
+          </div>
+          <h3>Hybrid Soft-DTW Siamese Network</h3>
+          <p class="meta">Time-series • Anomaly detection • Manufacturing</p>
           <ul>
-            <li>Co-designed Siamese + Soft-DTW approach for multivariate pattern matching.</li>
-            <li>Target: real-time anomaly detection in manufacturing sensor streams.</li>
+            <li>Co-designed Siamese network + Soft-DTW for multivariate pattern matching in sensor streams.</li>
+            <li>Demonstrated effectiveness on industrial sequences with learned temporal warping distances.</li>
           </ul>
-          <p class="small">Status: manuscript in preparation</p>
+          <div class="project-status">
+             Manuscript in preparation
+          </div>
         </div>
 
-        <div class="card">
-          <h3>PM2.5 Prediction from NASA MODIS Satellite Data</h3>
-          <p class="meta">Remote sensing • Spatiotemporal modeling • Ground-truth alignment</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+            <img src="assets/projects/pm25-visualization.png" alt="PM2.5 Prediction Heatmap" />
+            <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.1" /></linearGradient></defs>
+              <rect width="200" height="160" fill="url(#g4)" /><rect x="40" y="30" width="60" height="50" stroke="#0066cc" stroke-width="2" fill="#e6f2ff" opacity="0.5" /><circle cx="70" cy="55" r="15" fill="#0066cc" opacity="0.6" /><path d="M 50 100 Q 100 80 150 100" stroke="#0066cc" stroke-width="2" fill="none" /><text x="100" y="135" text-anchor="middle" font-size="11" fill="#0066cc" font-weight="500">Remote Sensing</text>
+            </svg>
+          </div>
+          <h3>PM2.5 Prediction from NASA MODIS Data</h3>
+          <p class="meta">Remote sensing • Spatiotemporal • Air quality</p>
           <ul>
-            <li>Built pipeline using satellite-derived signals aligned to EPA AQS stations.</li>
-            <li>Performed seasonal pattern analysis and predictive modeling.</li>
+            <li>Built end-to-end satellite pipeline using MODIS Level-2 data aligned to EPA AQS stations.</li>
+            <li>Performed seasonal analysis and predictive modeling of particulate matter concentrations.</li>
           </ul>
-          <p class="small">Related publication: IEEE IETC 2025</p>
+          <div class="project-status">
+             Published: IEEE IETC 2025
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Multimodal + Multilingual RAG (Offline Deployment)</h3>
-          <p class="meta">Hybrid retrieval • Ranking • Hallucination evaluation</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+            <!-- IMAGE (Uncomment when ready): <img src="assets/projects/rag-visualization.png" alt="Multimodal RAG Pipeline" /> -->
+            <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.3" /><stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.1" /></linearGradient></defs>
+              <rect width="200" height="160" fill="url(#g5)" /><rect x="30" y="40" width="50" height="60" stroke="#0066cc" stroke-width="2" fill="#e6f2ff" opacity="0.5" /><rect x="120" y="40" width="50" height="60" stroke="#0066cc" stroke-width="2" fill="#e6f2ff" opacity="0.5" /><path d="M 80 70 L 120 70" stroke="#0066cc" stroke-width="2" /><text x="55" y="75" text-anchor="middle" font-size="10" fill="#0066cc" font-weight="500">Doc</text><text x="145" y="75" text-anchor="middle" font-size="10" fill="#0066cc" font-weight="500">Query</text><text x="100" y="135" text-anchor="middle" font-size="11" fill="#0066cc" font-weight="500">Multimodal RAG</text>
+            </svg>
+          </div>
+          <h3>Multimodal Multilingual RAG System</h3>
+          <p class="meta">Hybrid retrieval • Embeddings • Offline deployment</p>
           <ul>
-            <li>Built an offline RAG pipeline with custom chunking + ranking.</li>
-            <li>Used CLIP/MpNet embeddings and LLaMA-based generation for multilingual Q&amp;A.</li>
+            <li>Built offline RAG pipeline with custom chunking strategies and multi-stage ranking.</li>
+            <li>Integrated CLIP/MpNet embeddings and LLaMA generation for privacy-aware Q&A.</li>
           </ul>
+          <div class="project-status">
+            Completed • Industry collaboration
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Thesis (Ongoing): 3D Reconstruction Using Radio Frequencies</h3>
-          <p class="meta">Multi-band RF (sub-6 GHz + mmWave) • Through-wall depth & coarse pose</p>
+        <div class="card project-card" data-reveal>
+          <div class="project-visual">
+             <img src="assets/projects/rf-reconstruction-visualization.png" alt="3D RF Reconstruction" />
+          
+          </div>
+          <h3>3D Reconstruction Using Radio Frequencies</h3>
+          <p class="meta">Multi-band RF • Privacy-preserving • Thesis</p>
           <ul>
-            <li>Goal: privacy-preserving depth + pose reconstruction with optional RGB for semantics.</li>
-            <li>Deliverables: benchmark protocol, code release, first-author submission (target Summer 2026).</li>
+            <li>Goal: Depth and coarse pose reconstruction using sub-6 GHz and mmWave without visual data.</li>
+            <li>Developing benchmark protocols and releasing code; targeting first-author submission Summer 2026.</li>
           </ul>
+          <div class="project-status">
+            Master's thesis (ongoing) • Expected: Summer 2026
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" data-reveal>
       <h2>Publications</h2>
-      <div class="card">
-        <ul>
-          <li>
-            <b>A New Metric for Measuring Locational Health Access for Cancer Treatment</b>, IEEE BIBM 2024.
-            <a class="link" href="https://doi.org/10.1109/BIBM62325.2024.10822220" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            <b>A New Data Driven Approach for Identifying Underserved Areas of Hospitals Accepting Medicare</b>, IEEE IETC 2025.
-            <a class="link" href="https://doi.org/10.1109/IETC64455.2025.11039493" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            <b>Kinematic analysis of lumbar pedicle screw placement using an artificial intelligence framework</b>, Neurosurgical Focus (2025).
-            <a class="link" href="https://doi.org/10.3171/2025.4.FOCUS25157" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            <b>Direct Prediction of PM2.5 from Raw Satellite Data – A Prospectus</b>, IEEE IETC 2025.
-            <a class="link" href="https://doi.org/10.1109/IETC64455.2025.11039472" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            <b>An Algorithm for Feature Based Segmentation of Contiguous Area in a Community to Locate Underserved Areas</b>, ACM SIGSPATIAL Workshop (2025).
-          </li>
-        </ul>
+      <div class="card" data-reveal>
 
-        <p class="small"><b>Under review / accepted:</b> Real-time patient safety system using deep learning (accepted); PM2.5 estimation using MODIS + meteorological variables (accepted).</p>
+        <!-- JOURNAL ARTICLES -->
+        <div class="pub-category">
+          <h4>Journal Articles</h4>
+          <div class="pub-item">
+            <p class="pub-title">Kinematic analysis of lumbar pedicle screw placement using an artificial intelligence framework</p>
+            <p class="pub-meta">
+              <strong>Neurosurgical Focus</strong> • 2025
+              <br><a class="link" href="https://doi.org/10.3171/2025.4.FOCUS25157" target="_blank" rel="noopener">DOI: 10.3171/2025.4.FOCUS25157</a>
+            </p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">Real-time Patient Safety System Using Deep Learning for Fall Detection and Clinical Monitoring</p>
+            <p class="pub-meta">
+              <strong>BiomedSciInstrum</strong> • 2025
+              <br><a class="link" href="https://iaexpress.ca/wp-content/uploads/2025/11/17_BiomedSciInstrum-Vol-61_2_-October-2025_Rathod-pg-394.pdf" target="_blank" rel="noopener">DOI: 10.34107/UDUK9890394</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- CONFERENCE PAPERS -->
+        <div class="pub-category">
+          <h4>Conference Papers</h4>
+          <div class="pub-item">
+            <p class="pub-title">A New Metric for Measuring Locational Health Access for Cancer Treatment</p>
+            <p class="pub-meta">
+              IEEE BIBM (International Conference on Bioinformatics and Biomedicine) • 2024
+              <br><a class="link" href="https://doi.org/10.1109/BIBM62325.2024.10822220" target="_blank" rel="noopener">DOI: 10.1109/BIBM62325.2024.10822220</a>
+            </p>
+          </div>
+
+          <div class="pub-item">
+            <p class="pub-title">A New Data Driven Approach for Identifying Underserved Areas of Hospitals Accepting Medicare</p>
+            <p class="pub-meta">
+              IEEE IETC (International Engineering and Technology Conference) • 2025
+              <br><a class="link" href="https://doi.org/10.1109/IETC64455.2025.11039493" target="_blank" rel="noopener">DOI: 10.1109/IETC64455.2025.11039493</a>
+            </p>
+          </div>
+
+          <div class="pub-item">
+            <p class="pub-title">Direct Prediction of PM2.5 from Raw Satellite Data – A Prospectus</p>
+            <p class="pub-meta">
+              IEEE IETC (International Engineering and Technology Conference) • 2025
+              <br><a class="link" href="https://doi.org/10.1109/IETC64455.2025.11039472" target="_blank" rel="noopener">DOI: 10.1109/IETC64455.2025.11039472</a>
+            </p>
+          </div>
+           <div class="pub-item">
+            <p class="pub-title">An Algorithm for Feature Based Segmentation of Contiguous Area in a Community to Locate Underserved Areas</p>
+            <p class="pub-meta">
+              ACM SIGSPATIAL  • 2025
+              <br><a class="link" href="https://doi.org/10.1145/3764924.3770901" target="_blank" rel="noopener">DOI: 10.1145/3764924.3770901</a>
+            </p>
+          </div>
+        </div>
+
+ 
+
+        <!-- ACCEPTED & UNDER REVIEW -->
+     
+          <div class="pub-item">
+            <p class="pub-title">PM2.5 Concentration Estimation Using MODIS Optical Data and Meteorological Variables: A Regional Analysis</p>
+            <p class="pub-meta">
+              Remote Sensing Applications
+              <span class="badge accepted">Accepted</span>
+            </p>
+          </div>
+          <!-- POSTERS -->
+        <div class="pub-category">
+          <h4> Posters</h4>
+          <div class="pub-item">
+            <p class="pub-title">An Algorithm for Feature Based Segmentation of Contiguous Area in a Community to Locate Underserved Areas</p>
+            <p class="pub-meta">
+              ACM SIGSPATIAL Workshop • 2025
+              <span class="badge">Workshop</span>
+            </p>
+          </div>
+        </div>
+        </div>
+        
+
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" data-reveal>
       <h2>Experience</h2>
       <div class="grid">
         <div class="card">
-          <h3>Graduate Assistant — Machine Learning Lab, LSU Shreveport</h3>
-          <p class="meta">Oct 2024 – Present • Shreveport, LA</p>
+          <h3>Graduate Research Assistant</h3>
+          <p class="meta">Machine Learning Lab, LSU Shreveport • Oct 2024 – Present</p>
           <ul>
-            <li>Project planning, data processing, and ML model development.</li>
-            <li>Literature reviews, paper writing support, posters, and technical documentation.</li>
+            <li>Directed project planning, data processing, and ML model development for healthcare and geospatial research.</li>
+            <li>Led literature reviews, peer-reviewed writing, poster creation, and technical documentation.</li>
+            <li>Collaborated with clinical partners on fall detection and surgical skill assessment systems.</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Intern — Benteler Steel & Tube</h3>
-          <p class="meta">Summer & Fall 2025</p>
+          <h3>Research Intern</h3>
+          <p class="meta">Benteler Steel & Tube • Summer & Fall 2025</p>
           <ul>
-            <li>Designed a .NET Core + SQL Server authentication service with role-based access control.</li>
-            <li>Built an offline multimodal RAG system with ranking + relevance-based chunking.</li>
+            <li>Designed .NET Core + SQL Server authentication service with role-based access control (RBAC).</li>
+            <li>Built offline multimodal RAG system with hybrid retrieval and ranked relevance-based chunking.</li>
+            <li>Deployed privacy-aware systems for internal knowledge management and enterprise search.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
+    <!-- SKILLS SECTION -->
+    <section id="skills" data-reveal>
       <h2>Skills</h2>
-      <div class="twoCol">
+      <div class="skills-grid">
         <div class="card">
-          <h3>Core Stack</h3>
+          <h3>Programming Languages</h3>
           <ul>
-            <li><b>Python</b>, SQL, JavaScript, Dart</li>
-            <li>PyTorch, TensorFlow, OpenCV, MediaPipe</li>
-            <li>Pandas, NumPy, GeoPandas, Matplotlib, Tableau</li>
+            <li><strong>Python</strong> (NumPy, Pandas, PyTorch, TensorFlow)</li>
+            <li><strong>SQL</strong> (SQL Server, PostgreSQL, spatial queries)</li>
+            <li>JavaScript, Dart, Bash</li>
           </ul>
         </div>
+
         <div class="card">
-          <h3>Tools & Systems</h3>
+          <h3>ML & Computer Vision</h3>
           <ul>
-            <li>Git, Docker, VS Code, SQL Server, REST APIs</li>
-            <li>OSRM routing, MODIS HDF workflows, Geospatial clustering</li>
-            <li>RAG pipelines, embedding models, offline deployments</li>
+            <li>PyTorch, TensorFlow, Keras</li>
+            <li>OpenCV, MediaPipe, YOLO</li>
+            <li>Time-series (DTW, Siamese networks, anomaly detection)</li>
+            <li>RAG systems, embedding models (CLIP, MpNet, LLaMA)</li>
           </ul>
         </div>
-      </div>
-      <div class="card" style="margin-top: 16px;">
-        <h3>Scholarships</h3>
-        <ul>
-          <li>J.P. Morgan Chase Endowed Scholarship (2025)</li>
-        </ul>
+
+        <div class="card">
+          <h3>Geospatial & Remote Sensing</h3>
+          <ul>
+            <li>GeoPandas, Shapely, GDAL, Rasterio</li>
+            <li>OSRM routing, spatial indexing, graph algorithms</li>
+            <li>MODIS HDF processing, satellite data pipelines</li>
+            <li>Geovisualization (Folium, Plotly, Cartopy)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Systems & Tools</h3>
+          <ul>
+            <li>Git, Docker, CI/CD pipelines</li>
+            <li>SQL Server, REST APIs, Jupyter notebooks</li>
+            <li>VS Code, Linux command line</li>
+            <li>Tableau for data visualization</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Data Processing</h3>
+          <ul>
+            <li>Pandas, NumPy, SciPy</li>
+            <li>Data cleaning, feature engineering, EDA</li>
+            <li>Census data harmonization, EPA integration</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Awards & Scholarships</h3>
+          <ul>
+            <li><strong>J.P. Morgan Chase Endowed Scholarship</strong> (2025)</li>
+            <li>LSU Shreveport Graduate Assistantship (Full tuition waiver)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p><b>Email:</b> <a class="link" href="mailto:rathodu35@lsus.edu">rathodu35@lsus.edu</a></p>
+        <p><strong>Email:</strong> <a class="link" href="mailto:rathodu35@lsus.edu">rathodu35@lsus.edu</a></p>
+        <p><strong>Location:</strong> Shreveport, Louisiana</p>
+        <p class="text-small">
+          Open to PhD opportunities, research collaborations, and industry partnerships in computer vision, geospatial AI, and healthcare informatics.
+        </p>
       </div>
     </section>
 
@@ -344,12 +405,52 @@
 
   <footer>
     <div class="wrap">
-      <small>© <span id="y"></span> Udaysinh Rathod</small>
+      <p>© <span id="year"></span> Udaysinh Rathod • <a class="link" href="https://github.com/udayDarbar/uday.github.io" target="_blank" rel="noopener">source</a></p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // Auto-update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ===== SCROLL REVEAL ANIMATIONS =====
+    (function () {
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+    })();
+
+    // ===== ACTIVE NAV HIGHLIGHTING =====
+    (function () {
+      const links = Array.from(document.querySelectorAll('header nav a[href^="#"]'));
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const sections = Array.from(document.querySelectorAll('main section[id]'));
+
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+
+        const id = visible.target.id;
+        links.forEach(a => a.classList.toggle('active', map.get(id) === a));
+      }, { rootMargin: '-35% 0px -55% 0px', threshold: [0.1, 0.2, 0.3] });
+
+      sections.forEach(s => io.observe(s));
+    })();
   </script>
 </body>
 </html>
