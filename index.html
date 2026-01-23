@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YOUR NAME | Portfolio</title>
+  <meta name="description" content="Portfolio website" />
+  <style>
+    :root { --max: 980px; --pad: 20px; }
+    body { margin:0; font-family: system-ui, Arial; line-height:1.6; color:#111; background:#fff; }
+    header { border-bottom:1px solid #eee; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: var(--pad); }
+    .hero { padding: 42px 0 18px; }
+    h1 { margin:0 0 8px; font-size: 34px; }
+    .sub { margin:0; color:#444; }
+    nav a { margin-right: 14px; text-decoration:none; color:#111; }
+    nav a:hover { text-decoration: underline; }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 760px){ .grid{ grid-template-columns: 1fr; } }
+    .card { border:1px solid #eee; border-radius: 14px; padding: 16px; }
+    .pill { display:inline-block; border:1px solid #eee; border-radius: 999px; padding: 6px 10px; margin: 4px 6px 0 0; font-size: 13px; }
+    footer { border-top:1px solid #eee; margin-top: 26px; color:#555; }
+    .btn { display:inline-block; padding:10px 12px; border-radius: 10px; border:1px solid #111; text-decoration:none; color:#111; }
+    .btn:hover { background:#111; color:#fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>YOUR NAME</h1>
+      <p class="sub">YOUR TAGLINE (e.g., MS Student • ML/Computer Vision • Research)</p>
+      <p>
+        <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="LINK_TO_YOUR_CV_PDF" target="_blank" rel="noopener">CV</a>
+        <a class="btn" href="LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <div>
+        <span class="pill">Computer Vision</span>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">Geospatial</span>
+        <span class="pill">NLP</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project Title 1</h3>
+          <p>1–2 lines describing what you built and why it matters.</p>
+          <p>
+            <a href="REPO_LINK_1" target="_blank" rel="noopener">Repo</a> ·
+            <a href="DEMO_LINK_1" target="_blank" rel="noopener">Demo</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Project Title 2</h3>
+          <p>1–2 lines describing results (metrics, impact, dataset, etc.).</p>
+          <p>
+            <a href="REPO_LINK_2" target="_blank" rel="noopener">Repo</a> ·
+            <a href="PAPER_OR_POSTER_LINK" target="_blank" rel="noopener">Paper/Poster</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li><b>Paper title</b> — Venue, Year. <a href="PAPER_LINK">link</a></li>
+        <li><b>Paper title</b> — Venue, Year. <a href="PAPER_LINK">link</a></li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Write 3–5 lines: who you are, what you work on, what you’re seeking (PhD, research, etc.).
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="y"></span> YOUR NAME</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
