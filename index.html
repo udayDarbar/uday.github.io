@@ -6,7 +6,6 @@
   <title>Udaysinh Rathod | Research Portfolio</title>
   <meta name="description" content="Udaysinh Rathod — ML/Computer Vision, Geospatial AI, Remote Sensing, Time-Series, RAG." />
   <link rel="stylesheet" href="css/styles.css" />
-   <link rel="javascript" href="js/script.js" />
 </head>
 
 <body>
@@ -21,7 +20,7 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="theme-toggle">🌙</button>
+      <button id="theme-toggle" type="button">🌙</button>
     </div>
   </header>
 
@@ -450,6 +449,38 @@
       }, { rootMargin: '-35% 0px -55% 0px', threshold: [0.1, 0.2, 0.3] });
 
       sections.forEach(s => io.observe(s));
+    })();
+
+    // ===== DARK THEME TOGGLE (LIGHT THEME IS DEFAULT) =====
+    (function() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (!toggleBtn) return;
+
+      // Always start with light theme (default)
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      } else {
+        // Ensure light theme on load
+        document.documentElement.removeAttribute('data-theme');
+        toggleBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+
+      // Toggle between light and dark on click
+      toggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          toggleBtn.textContent = '🌙';
+          localStorage.setItem('theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          toggleBtn.textContent = '☀️';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
     })();
   </script>
 </body>
