@@ -555,17 +555,19 @@ footer {
 /* === IMAGES & ICONS === */
 .profile-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
   border-radius: 12px;
   border: 1px solid var(--border);
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
 }
 
 html[data-theme="dark"] .profile-img {
   border-color: var(--dark-border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .project-visual img {
@@ -573,6 +575,23 @@ html[data-theme="dark"] .profile-img {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+/* Optimize Fall Detection & charts images - use contain to show full image */
+.project-visual img[alt*="Fall Detection"],
+.project-visual img[alt*="DTW"],
+.project-visual img[alt*="MODIS"] {
+  object-fit: contain;
+  padding: 8px;
+}
+
+html[data-theme="dark"] .project-visual {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+}
+
+html[data-theme="dark"] .project-visual img {
+  background: #1a1a1a;
+  border: 1px solid #333;
 }
 
 .project-visual svg {
@@ -628,38 +647,6 @@ html[data-theme="dark"] .btn.ghost {
   background: #1a1a1a;
 }
 
-/* === AUTO DARK THEME (SYSTEM PREFERENCE) === */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: var(--dark-text);
-    --text-light: var(--dark-text-light);
-    --card: var(--dark-card);
-    --bg-subtle: #1a1a1a;
-    --border: var(--dark-border);
-    --border-dark: #444;
-  }
-
-  body {
-    background: var(--dark-bg);
-  }
-
-  header {
-    background: rgba(15, 15, 15, 0.95);
-  }
-
-  .hero-visual {
-    background:
-      radial-gradient(900px 300px at 10% 10%, rgba(0, 102, 204, 0.15), transparent 55%),
-      radial-gradient(700px 260px at 90% 80%, rgba(99, 102, 241, 0.12), transparent 50%),
-      #1a1a1a;
-  }
-
-  .pill {
-    background: #1a1a1a;
-    border-color: #333;
-  }
-
-  .btn.ghost {
-    background: #1a1a1a;
-  }
-}
+/* === DARK THEME AUTO-DETECT DISABLED === */
+/* Manual toggle only - Light theme is default */
+/* System preference detection removed per user request */

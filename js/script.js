@@ -42,24 +42,35 @@ document.getElementById("year").textContent = new Date().getFullYear();
   sections.forEach(s => io.observe(s));
 })();
 
-// ===== OPTIONAL: DARK THEME TOGGLE =====
-// Uncomment this section if you want manual dark theme toggle button
-
+// ===== DARK THEME TOGGLE (LIGHT THEME IS DEFAULT) =====
 (function() {
   const toggleBtn = document.getElementById('theme-toggle');
   if (!toggleBtn) return;
 
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  if (currentTheme === 'dark') {
+  // Always start with light theme (default)
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
     toggleBtn.textContent = '☀️';
+  } else {
+    // Ensure light theme on load
+    document.documentElement.removeAttribute('data-theme');
+    toggleBtn.textContent = '🌙';
+    localStorage.setItem('theme', 'light');
   }
 
+  // Toggle between light and dark on click
   toggleBtn.addEventListener('click', () => {
-    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    }
   });
 })();
 
